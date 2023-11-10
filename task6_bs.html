@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP TASK 6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control is-invalid" id="name" name="name" required>
+                <div class="invalid-feedback">Name is required</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control is-invalid" id="email" name="email" required>
+                <div class="invalid-feedback">Email is required</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Password</label>
+                <input type="password" class="form-control is-invalid" id="email" name="password" required>
+                <div class="invalid-feedback">Password is required</div>
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <select class="form-control" id="hobbies" name="hobbies" required>
+                    <option value=""></option>
+                    <option value="reading">Reading</option>
+                    <option value="painting">Painting</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="cooking">Cooking</option>
+                </select>
+            <button type="submit" class="btn btn-danger btn-block mt-3">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

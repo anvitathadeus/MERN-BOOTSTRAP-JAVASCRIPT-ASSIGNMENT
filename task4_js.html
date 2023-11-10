@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT TASK 4</title>
+</head>
+<body>
+    <input type="button" onClick="date()" Value="Show Date" /> <br>
+    <p id="date"></p>
+    <input type="button" onClick="time()" Value="Show Time" />
+    <p id="time"></p>
+  
+    <script>
+        function date() {
+        const currentDate = new Date();
+        const date = currentDate.getDate();
+    const month = currentDate.toLocaleString('en-US', { month: 'long' });
+    const year = currentDate.getFullYear();
+    document.getElementById("date").innerHTML = `${date}/${month}/${year}`;
+}
+        function time() {
+            const currentTime = new Date();
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'long',
+                timeZone: 'Asia/Kolkata',
+            };
+            const timeString = currentTime.toLocaleDateString('en-US', options);
+            document.getElementById("time").innerHTML = `${timeString}`;
+        }
+    </script>
+</body>
+</html>

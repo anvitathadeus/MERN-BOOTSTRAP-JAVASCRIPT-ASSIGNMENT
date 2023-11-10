@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT TASK 2</title>
+</head>
+<body>
+     <script>
+        function sort(word) {
+            return word.split('').sort().join('');
+    }
+    const original_word = "webmaster";
+    const sorted_word = sort(original_word);
+    document.write(`Example word : ${original_word}`);
+    document.write("<br>");
+    document.write(`Expected Output : ${sorted_word}`);
+    </script>
+</body>
+</html>

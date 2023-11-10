@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT TASK 5</title>
+    <style>
+        .form-group {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="text"],
+        textarea {
+            border: 2px solid black;
+            padding: 6px;
+            margin-left: 10px;
+        }
+        .error {
+            color: red;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+            <span class="error" id="websiteError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <span class="error" id="messageError"></span>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function(event) {
+            let valid = true;
+
+            if (form.name.value.trim() === "") {
+                valid = false;
+                document.getElementById("name").style.borderColor = "red";
+                document.getElementById("nameError").textContent = "This field is required";
+            } else {
+                document.getElementById("name").style.borderColor = "";
+                document.getElementById("nameError").textContent = "";
+            }
+
+            if (form.email.value.trim() === "") {
+                valid = false;
+                document.getElementById("email").style.borderColor = "red";
+                document.getElementById("emailError").textContent = "A valid email address is required";
+            } else {
+                document.getElementById("email").style.borderColor = "";
+                document.getElementById("emailError").textContent = "";
+            }
+
+            if (form.website.value.trim() === "") {
+                valid = false;
+                document.getElementById("website").style.borderColor = "red";
+                document.getElementById("websiteError").textContent = "A valid url is required";
+            } else {
+                document.getElementById("website").style.borderColor = "";
+                document.getElementById("websiteError").textContent = "";
+            }
+
+            if (form.message.value.trim() === "") {
+                valid = false;
+                document.getElementById("message").style.borderColor = "red";
+                document.getElementById("messageError").textContent = "This field is required";
+            } else {
+                document.getElementById("message").style.borderColor = "";
+                document.getElementById("messageError").textContent = "";
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

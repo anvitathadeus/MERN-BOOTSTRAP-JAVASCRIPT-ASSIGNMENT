@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT TASK 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #e7e5e5da;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 500;
+            color: black;
+            font-style: italic;
+        }
+
+        .form-group {
+            margin: 15px 0;
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 30px 10px 45px;
+            margin: 5px 0;
+            border: 1px solid #bbb2b2;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .icon {
+            position: absolute;
+            padding: 10px;
+            background: #b8b5b5da;
+            color: black;
+            min-width: 20px;
+            text-align: center;
+            top: 0;
+            left: 0;
+            bottom: 0;       
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+        .login-button {
+            background: #026aaf;
+            color: #fff;
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .login-button:hover {
+            background: #2991d6;
+        }
+
+        .remember-me {
+            text-align: left;
+            float: left;
+        }
+
+        .forgot-password {
+            text-align: right;
+            float: right;
+        }
+
+        .sign_up {
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Instagram</h1>
+        <div class="form-group">
+            <i class="fa fa-user icon"></i>
+            <input type="text" class="input-field" id="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <i class="fa fa-key icon"></i>
+            <input type="password" class="input-field" id="password" placeholder="Password">
+        </div>
+        <button class="login-button" id="loginButton">Log In</button>
+        <div class="form-group">
+            <label class="remember-me">
+                <input type="checkbox" id="rememberMe"> Remember Me
+            </label>
+            <label class="forgot-password">
+                <a href="#" style="color: #2a85c2;">Forgot Password?</a>
+            </label>
+        </div>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById("loginButton");
+
+        loginButton.addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const rememberMe = document.getElementById("rememberMe").checked;
+            alert(`Username: ${username}\nPassword: ${password}\nRemember Me: ${rememberMe}`);
+        }
+        );
+    </script>
+</body>
+</html>

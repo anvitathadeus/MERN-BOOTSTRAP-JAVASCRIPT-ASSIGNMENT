@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }.navbar{
+    background-color: rgb(66, 212, 218);
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+.custom-bg{
+    background-color: rgb(167, 165, 165);
+}
+.nav-link {
+    margin: 0px 45px 0px 20px; 
+}
+.content{
+    margin-top: 10px;
+}
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.text-container {
+    display: flex;
+    flex: 1;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.grey-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    height: calc(100%-50px);
+    width: 25%;
+    background-color: rgb(100, 96, 96);
+}
+.grey-container .text-center{
+    margin-top: 15px;
+}
+.spacer{
+    flex: 1;
+}

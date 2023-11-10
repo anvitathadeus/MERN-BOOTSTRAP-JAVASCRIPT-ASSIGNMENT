@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT TASK 8</title>
+</head>
+<body>
+    <script type="text/javascript" src="task8.js"></script>
+
+    <form name="myForm" onSubmit="return validate();">
+        <h1 align="center" style="color: blue;">Registration form</h1>
+
+        <table align="center" cellpadding="4">
+
+            <tr>
+                <td> First Name </td>
+                <td>
+                    <input type="text" name="First_Name"/>
+                    <span style="color: red;"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Last Name</td>
+                <td>
+                    <input type="text" name="Last_Name" />
+                    <span style="color: red;"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Email</td>
+                <td>
+                    <input type="text" name="Email" />
+                    <span style="color: red;"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Password</td>
+                <td>
+                    <input type="password" name="Password" />
+                    <span style="color: red;"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Re-enter Password</td>
+                <td>
+                    <input type="Password" name="Reenter_Password" />
+                    <span style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td> Gender </td>
+                <td><input type="radio" name="Gender" value="male" /> Male<br>
+                <input type="radio" name="Gender" value="female" />Female
+                </td>
+            </tr>
+
+            <tr>
+                <td> Age</td>
+                <td>
+                    <input type="number" name="age" />
+                    <span style="color: red;"></span>
+                </td>
+            </tr>
+            
+
+            <tr>
+                <td>Phone number</td>
+            <td>
+                  <input type="number" name="Mobile"/>
+                  <span style="color: red;"></span>
+            </td>
+            </tr>
+               
+            <tr>
+                <td> Address</td>
+            
+            <td>
+                <textarea name = "address" rows="6" cols="30">      
+                </textarea>
+                <span style="color: red;"></span>
+            </td>   
+            </tr>
+            
+            <tr>
+                <td>State</td>
+            
+            <td>
+                <input type="text" name="State" />
+                <span style="color: red;"></span>
+            </td>
+            
+            </tr>
+            
+            <tr>
+                <td> Country</td>
+                <td>
+                    <select name="country">
+                        <option disabled selected value="">Choose your country</option>
+                        <option value="India">India</option>
+                        <option value="France">France</option>
+                        <option value="Japan">Japan</option>
+                        <span style="color: red;"></span>
+                </td>
+            </tr>
+            
+            
+            <tr>
+            <td>Languages known</td> <br>
+            <td>
+                <input type="checkbox" value="English">English
+                <input type="checkbox" value="kannada" id="kannada">Kannada
+                <input type="checkbox" value="hindi" id="hindi">Hindi
+                <input type="checkbox" value="Telugu" id="Telugu">Telugu
+            </td>
+            </tr>
+        
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="declaration" id="declaration" required>Hereby I declare all the given detail are true
+        
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: end;">Log in to<a href="https://ethnus.com/"> Ethnus </a>website</td>
+            </tr>
+            <tr>
+                <td align="right"></td>
+                <td>
+                    <input type="submit" Value="Register" style="color: white; background-color: red; border-radius: 10px; padding: 7px; width: 100px; text-decoration: underline; border-color: black; border-width: 3px;" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT_TASK_1</title>
+</head>
+<body>
+    <script>
+        function reverse_number(num) {
+        let num_str = num.toString(); 
+        let reversed_str = num_str.split('').reverse().join('');  
+        let reversed_num = parseFloat(reversed_str);  
+        if (num < 0) {
+        reversed_num = -reversed_num;
+        }
+        return reversed_num;
+  }
+  const original = 32243;
+  const reversed = reverse_number(original);
+  document.write(`Example x = ${original}`);
+  document.write("<br>");
+  document.write(`Expected output : ${reversed}\n`);
+    </script>
+</body>
+</html>

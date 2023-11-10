@@ -1,0 +1,27 @@
+.card-deck{
+    padding: 10px;
+    width: 80%
+  }
+  .card {
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 500px;
+
+  }
+  .card .card-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+    background-clip: padding-box;
+    position: relative;
+    z-index: -1;
+  }
+  .card .card-body{
+    font-size: large;
+  }
+  .card .card-link{
+
+    color:rgb(218, 86, 10);
+    font-size: large;
+  }

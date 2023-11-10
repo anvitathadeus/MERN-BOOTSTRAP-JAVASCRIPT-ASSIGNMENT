@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT TASK 7</title>
+    <style>
+        #train {
+            width: 200px; 
+            height: 200px; 
+            background-image: url('train.jpg'); 
+            background-size: cover;
+            position: relative;
+            animation: moveTrain 4s linear infinite;
+        }
+
+        @keyframes moveTrain {
+            0% { left: -0px; }
+            100% { left: 100%; }
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="train"></div>
+    <div class="button-container">
+        <center>
+        <h1 style="color: rgb(18, 18, 90);">Click the following button to handle animation</h1>
+        <button onclick="start_train()">Start</button>
+        <button onclick="stop_train()">Stop</button></center>
+    </div>
+
+    <script>
+        let isMoving = false;
+        const train = document.getElementById("train");
+
+        function start_train() {
+            if (!isMoving) {
+                train.style.animationPlayState = "running";
+                isMoving = true;
+            }
+        }
+
+        function stop_train() {
+            if (isMoving) {
+                train.style.animationPlayState = "paused";
+                isMoving = false;
+            }
+        }
+        train.style.animationPlayState = "paused";
+    </script>
+</body>
+</html>
